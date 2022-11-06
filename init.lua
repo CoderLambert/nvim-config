@@ -5,6 +5,8 @@ require "user.plugins"
 require "user.nvim-tree"
 require "user.colorscheme"
 require "user.telescope"
+require "user.treesitter"
+
 -- require "user.project"
 require "user.bufferline"
 require "user.lualine"

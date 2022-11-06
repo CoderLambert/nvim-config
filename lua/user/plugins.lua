@@ -83,7 +83,7 @@ return packer.startup(function(use)
   use "BurntSushi/ripgrep"
   use "sharkdp/fd"
 	use({ "nvim-telescope/telescope.nvim", commit = "d96eaa914aab6cfc4adccb34af421bdd496468b0" })
-  use({"nvim-telescope/telescope-fzf-native.nvim", run = 'make'})
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
   use({"nvim-telescope/telescope-ui-select.nvim"})
   use({"nvim-telescope/telescope-live-grep-raw.nvim"})
   use({"MattesGroeger/vim-bookmarks"})
@@ -95,10 +95,11 @@ return packer.startup(function(use)
 	use({
 		"nvim-treesitter/nvim-treesitter",
     -- https://github.com/nvim-treesitter/nvim-treesitter/wiki/Installation
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-	})
-
-	-- Git
+	  run = ':TSUpdate'
+  })
+  use("p00f/nvim-ts-rainbow")
+	
+  -- Git
 	use({ "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" })
 
   -- hop
