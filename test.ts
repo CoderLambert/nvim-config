@@ -8,4 +8,8 @@ export class User {
 
     console.log('lslasldasdas')
   }
+
+  tets(){
+    return false
+  }
 }

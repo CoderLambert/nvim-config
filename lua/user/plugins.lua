@@ -98,7 +98,7 @@ return packer.startup(function(use)
 	  run = ':TSUpdate'
   })
   use("p00f/nvim-ts-rainbow")
-	
+	use("nvim-treesitter/playground")
   -- Git
 	use({ "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" })
 
@@ -113,7 +113,6 @@ use {
       }
   end
 }
-
 -- neovim-session-manager  会话恢复
 use({"Shatur/neovim-session-manager"})
   -- SnipRun

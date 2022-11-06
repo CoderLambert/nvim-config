@@ -24,6 +24,12 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+
+--keymap('n', 'ff', builtin.find_files, {})
+--keymap('n', 'fg', builtin.live_grep, {})
+--keymap('n', 'fb', builtin.buffers, {})
+--keymap('n', 'fh', builtin.help_tags, {})
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -76,8 +82,4 @@ keymap('n', '<C-j>', ":HopWord<CR>", opts)
 -- telescope
 
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
